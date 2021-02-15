@@ -106,7 +106,6 @@ int main()
     {
         message[0] = 0;
         scanf("%[^\n]%*c", message);
-        printf("u - %s\n", message);
         if (strlen(message) == 0)
         {
             getchar();

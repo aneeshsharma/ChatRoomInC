@@ -202,7 +202,6 @@ int main()
             printf("New thread created - %d\n", connections[curr].id);
             curr++;
             client->num = &curr;
-            printf("User count - %d\n", curr);
         }
     }
 
