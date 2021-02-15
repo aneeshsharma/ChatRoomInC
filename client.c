@@ -104,11 +104,21 @@ int main()
 
     while (1)
     {
+        message[0] = 0;
         scanf("%[^\n]%*c", message);
+        printf("u - %s\n", message);
+        if (strlen(message) == 0)
+        {
+            getchar();
+            continue;
+        }
         send(sock_fd, message, strlen(message), 0);
         if (strcmp(message, "/exit") == 0)
             break;
     }
+
+    printf("Closing connection...\n");
     close(sock_fd);
+    printf("Disconnected\n");
     return 0;
 }
